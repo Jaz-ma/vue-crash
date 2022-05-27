@@ -15,5 +15,6 @@ export default{
             console.log('clicked');
         }
     },
+    
 }
 </script>
