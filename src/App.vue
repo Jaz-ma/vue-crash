@@ -41,7 +41,7 @@ data(){
                 id:3,
                 text:'Food Shopping',
                 day:'March 3rd at 11:30 AM',
-                reminder:true,
+                reminder:false,
 
             },
 
