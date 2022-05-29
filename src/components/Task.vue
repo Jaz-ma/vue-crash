@@ -36,6 +36,10 @@ export default {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
+-webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
 }
 .task.reminder {
   border-left: 5px solid green;
