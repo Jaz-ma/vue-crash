@@ -28,8 +28,8 @@ export default {
     name:'AddTask',
     data(){
       return{
-        text:'test',
-        day:'April',
+        text:'',
+        day:'',
         reminder: false
       }
     },
@@ -43,7 +43,7 @@ export default {
         }
 
         const newTask={
-          id: Math.floor(Math.random()*100000),
+          // id: Math.floor(Math.random()*100000),
           text: this.text,
           day: this.day,
           reminder: this.reminder,
