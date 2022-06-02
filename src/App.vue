@@ -6,6 +6,9 @@
 <AddTask @add-task="addTask" />
 </div>
 <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
+<router-view></router-view>
+<Footer/>
+
 </div>
 </template>
 
@@ -14,6 +17,7 @@
 import Tasks from './components/Tasks.vue'
 import Header from './components/header.vue'
 import AddTask from './components/AddTask.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
@@ -21,6 +25,7 @@ export default {
     Header,
     Tasks,
     AddTask,
+    Footer,
   },
 data(){
         return{
