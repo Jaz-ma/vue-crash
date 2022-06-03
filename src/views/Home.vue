@@ -1,7 +1,5 @@
 <template>
-    <div v-show="showAddTask">
-<AddTask @add-task="addTask" />
-</div>
+<AddTask v-show="showAddTask" @add-task="addTask" />
 <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
 
 </template>
@@ -27,7 +25,19 @@ export default {
       }
     },
      methods:{
-     
+       async addTask(task){
+         const res = await fetch('api/tasks',{
+           method:'POST',
+           headers:{
+             'content-type':'application/json'
+           },
+            body: JSON.stringify(task),
+         })
+
+         const data = await res.json()
+
+         this.tasks = [...this.tasks, data]
+       },
            async deleteTask(id){
         if(confirm('are you sure ')){
           const res = await fetch(`api/tasks/${id}`,{
