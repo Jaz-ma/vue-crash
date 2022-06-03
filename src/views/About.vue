@@ -1,5 +1,6 @@
 <template>
     <h1>
-        About
+        Version 1.0.3
     </h1>
+    <router-link to="/">Go back</router-link>
 </template>
